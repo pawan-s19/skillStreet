@@ -17,8 +17,8 @@ app.use(morgan("dev")); //Required for logging out requests on the console
 app.use(cors({ origin: "" })); // Required with the client setup, for now origin is blank
 
 //Setting up basic authentication, this requires a username and password from the client, that is mentioned below
-USERNAME = admin;
-PASSWORD = admin123;
+//USERNAME = admin;
+//PASSWORD = admin123;
 app.use(
   basicAuth({
     users: { admin: "admin123" },
