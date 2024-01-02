@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> A basic note taking API, which supports create, read, update, delete operations, made using node and express
+> A basic note taking API, which supports, create, read, update and delete operations, made using node, express and mongodb
 
 ### 🏠 [Homepage](https://skillstreet-production.up.railway.app/api/note)
 
@@ -39,7 +39,7 @@ npm run test
 username = admin
 password = admin123
 
-For Postman: Add a authorization, Basic Auth
+For Postman: Add an authorization, Basic Auth
 For Browser: Popup window for credentials
 ```
 
