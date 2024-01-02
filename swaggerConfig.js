@@ -8,8 +8,8 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "http://localhost:8080", // Update with your server URL
-      description: "Dev Server",
+      url: "https://skillstreet-production.up.railway.app/", // Update with your server URL
+      description: "prod Server",
     },
   ],
 };
