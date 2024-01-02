@@ -25,15 +25,22 @@ npm install
 
 ```sh
 npm run start
-To access the routes in postman, use basic auth in the authorization
-username = admin
-password = admin123
 ```
 
 ## Run tests
 
 ```sh
 npm run test
+```
+
+## Express-basic-auth
+
+```sh
+username = admin
+password = admin123
+
+For Postman: Add a authorization, Basic Auth
+For Browser: Popup window for credentials
 ```
 
 ## Author
