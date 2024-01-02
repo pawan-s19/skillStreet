@@ -25,6 +25,9 @@ npm install
 
 ```sh
 npm run start
+To access the routes in postman, use basic auth in the authorization
+username = admin
+password = admin123
 ```
 
 ## Run tests
