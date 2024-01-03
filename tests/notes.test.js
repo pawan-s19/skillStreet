@@ -8,27 +8,27 @@ beforeAll(async () => {
   await mongoose.connect(process.env.DB_URL);
 });
 
-describe("GET /api/get/notes", () => {
+describe("GET /api/note", () => {
   it("should return all notes", async () => {
-    const response = await request(app).get("/api/get/notes");
+    const response = await request(app)("/api/note");
     expect(response.statusCode).toBe(201);
     expect(response.type).toBe("application/json");
     expect(response.body).toBeInstanceOf(Object);
   });
 });
 
-describe("GET /api/get/notes?query", () => {
+describe("GET /api/note/:noteId", () => {
   it("should return a note", async () => {
-    const response = await request(app).get(`/api/get/notes?noteId=${noteId}`);
+    const response = await request(app).get(`/api/note/${noteId}`);
     expect(response.statusCode).toBe(201);
     expect(response.type).toBe("application/json");
     expect(response.body).toBeInstanceOf(Object);
   });
 });
 
-describe("POST /api/create/note", () => {
+describe("POST /api/note", () => {
   it("should create a note", async () => {
-    const response = await request(app).post("/api/create/note").send({
+    const response = await request(app).post("/api/note").send({
       title: "test note",
       content: "test content",
     });
@@ -41,9 +41,9 @@ describe("POST /api/create/note", () => {
   });
 });
 
-describe("PUT /api/update/note/:noteId", () => {
+describe("PUT /api/note/:noteId", () => {
   it("should update a note", async () => {
-    const response = await request(app).put(`/api/update/note/${noteId}`).send({
+    const response = await request(app).put(`/api/note/${noteId}`).send({
       title: "update test note",
       content: "update test content",
     });
@@ -56,9 +56,9 @@ describe("PUT /api/update/note/:noteId", () => {
   });
 });
 
-describe("DELETE /api/delete/note/:noteId", () => {
+describe("DELETE /api/note/:noteId", () => {
   it("should delete a note", async () => {
-    const response = await request(app).delete(`/api/delete/note/${noteId}`);
+    const response = await request(app).delete(`/api/note/${noteId}`);
     expect(response.body.message).toBe("Deleted successfully");
     expect(response.statusCode).toBe(201);
     expect(response.type).toBe("application/json");
